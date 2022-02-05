@@ -33,3 +33,10 @@
         "Successfully added a new article."
 
     chek juga pada database mongoDB Compas.
+
+## 368. DELETE All Article
+
+    Documentation: https://mongoosejs.com/docs/models.html
+    pengujian pada Postman : DELETE => localhost:3000/articles
+
+    jika berhasil data akan terhapus dan akan muncul pesan response sesuai yang kita buat
