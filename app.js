@@ -99,6 +99,21 @@ app
         }
       }
     );
+  })
+
+  .patch(function (req, res) {
+    Article.update(
+      { title: req.params.articleTitle },
+      { $set: req.body },
+
+      function (err) {
+        if (!err) {
+          res.send('Successfully updated article.');
+        } else {
+          res.send(err);
+        }
+      }
+    );
   });
 
 app.listen(3000, function () {

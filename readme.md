@@ -73,7 +73,7 @@
         }
      catatan: jack%20Bauer => %20 artinya space
 
-## 370. PUT a Specific Article
+## 371. PUT a Specific Article
 
     pengujian pada Postman :
                             - PUT => localhost:3000/articles/jack%20Bauer
@@ -86,3 +86,17 @@
     Note: Put akan digunakan untuk merubah seluruh data/ jika data gak semuanya di update maka akan dianggap kosong
     contoh: jika ada 2 data title dan content namun yang dirubah hanya data contennya saja maka hasil update datanya
             akan ada data contentnya saja, trus kemana data titlenya?? PUT itu seperti mempaste keseluruhan data, jadi kalau gak diisi dianggap kosong. silahkan dicoba!
+
+## 372. PATCH a Specific Article
+
+    Documentation:
+        Route $set => https://docs.mongodb.com/manual/reference/operator/update/set/
+
+    pengujian pada Postman :
+                            - PATCH => localhost:3000/articles/jack%20Bauer
+                                body => x-www-form-urlencoded :
+                                title: Jaka tarup
+
+    hasil response: Successfully updated article.
+
+    Note: diatas hanya update bagian title , bagian content akan tetap ada sesui data sebelumnya mesiki tidak diupdate
