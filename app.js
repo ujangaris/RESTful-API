@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const mongoose = require('mongoose');
+const req = require('express/lib/request');
 
 const app = express();
 
@@ -29,6 +30,7 @@ const Article = mongoose.model('Article', articleSchema);
 
 //TODO
 // ROUTE
+/* ----------------- Requests Tragetting All Articles ---------------- */
 app
   .route('/articles')
   // Gell all Article
@@ -64,6 +66,23 @@ app
         res.send(err);
       }
     });
+  });
+
+/* ----------------- Requests Tragetting A Specific Articles ---------------- */
+app
+  .route('/articles/:articleTitle')
+
+  .get(function (req, res) {
+    Article.findOne(
+      { title: req.params.articleTitle },
+      function (err, foundArticles) {
+        if (foundArticles) {
+          res.send(foundArticles);
+        } else {
+          res.send('No articles matching that title was found');
+        }
+      }
+    );
   });
 
 app.listen(3000, function () {

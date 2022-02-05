@@ -55,3 +55,20 @@
                                 content: Jack Bauer once stepped into quicksand...
                             - DELETE => localhost:3000/articles
                                 note: untuk delete jangan lupsa setelah hapus input data kembali!
+
+## 370. GET a Specific Article
+
+    Documentation:
+        Route parameters => https://expressjs.com/en/guide/routing.html
+        Route ASCII Encoding Reference => https://www.w3schools.com/tags/ref_urlencode.ASP
+
+    pengujian pada Postman :
+                            - GET => localhost:3000/articles/jack%20Bauer
+
+    hasil response:
+        {
+            "_id": "61fe01ed726542f6c2a57515",
+            "title": "jack Bauer",
+            "content": "Jack Bauer once stepped into quicksand. The quicksand couldn't escape and nearly drowned."
+        }
+     catatan: jack%20Bauer => %20 artinya space
