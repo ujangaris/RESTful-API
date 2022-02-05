@@ -83,6 +83,22 @@ app
         }
       }
     );
+  })
+
+  .put(function (req, res) {
+    Article.updateOne(
+      { title: req.params.articleTitle },
+      {
+        title: req.body.title,
+        content: req.body.content,
+      },
+      { new: true },
+      function (err) {
+        if (!err) {
+          res.send('Successfully updated article.');
+        }
+      }
+    );
   });
 
 app.listen(3000, function () {
