@@ -100,3 +100,11 @@
     hasil response: Successfully updated article.
 
     Note: diatas hanya update bagian title , bagian content akan tetap ada sesui data sebelumnya mesiki tidak diupdate
+
+## 373. DELETE a Specific Article
+
+    pengujian pada Postman :
+                            - DELETE => localhost:3000/articles/jack%20Bauer
+
+
+    hasil response: Successfully deleted the corresponding article
