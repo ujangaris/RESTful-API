@@ -13,3 +13,9 @@
     jalankan server : nodemon app.js
     pada browser : http://localhost:3000/articles
     dab lihat pada terminal, data akan tampil(jangan lupa insert beberapa data manual terlebih dahulu)
+
+## 366. GET All Articles part 2
+
+    jalankan server : nodemon app.js
+    pada browser : http://localhost:3000/articles
+    dab lihat pada browser, data akan tampil(jangan lupa insert beberapa data manual terlebih dahulu)
