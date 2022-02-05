@@ -40,3 +40,18 @@
     pengujian pada Postman : DELETE => localhost:3000/articles
 
     jika berhasil data akan terhapus dan akan muncul pesan response sesuai yang kita buat
+
+## 369. Chained Route Handlers Using Express
+
+    ket: merubah strukture code lebih rapih.
+    Documentation:
+        app.route() => https://expressjs.com/en/guide/routing.html
+
+    pengujian pada Postman :
+                            - GET => localhost:3000/articles
+                            - POST => localhost:3000/articles
+                                body=> x-www-form-urlencoded :
+                                title: jack Bauer
+                                content: Jack Bauer once stepped into quicksand...
+                            - DELETE => localhost:3000/articles
+                                note: untuk delete jangan lupsa setelah hapus input data kembali!
