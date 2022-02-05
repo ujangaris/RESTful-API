@@ -28,10 +28,29 @@ const articleSchema = {
 const Article = mongoose.model('Article', articleSchema);
 
 //TODO
+// Gell all Article
 app.get('/articles', function (req, res) {
   Article.find({}, function (err, foundArticles) {
     if (!err) {
       res.send(foundArticles);
+    } else {
+      res.send(err);
+    }
+  });
+});
+
+// Create Article
+app.post('/articles', function (req, res) {
+  //   console.log(req.body.title);
+  //   console.log(req.body.content);
+
+  const newArticle = new Article({
+    title: req.body.title,
+    content: req.body.content,
+  });
+  newArticle.save(function (err) {
+    if (!err) {
+      res.send('Successfully added a new article.');
     } else {
       res.send(err);
     }

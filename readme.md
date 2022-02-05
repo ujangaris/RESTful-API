@@ -19,3 +19,17 @@
     jalankan server : nodemon app.js
     pada browser : http://localhost:3000/articles
     dab lihat pada browser, data akan tampil(jangan lupa insert beberapa data manual terlebih dahulu)
+
+## 367. POST a new Article
+
+    Documentation: https://mongoosejs.com/docs/models.html
+
+    pengujian pada Postman : POST => localhost:3000/articles
+                                body=> x-www-form-urlencoded :
+                                title: jack Bauer
+                                content: Jack Bauer once stepped into quicksand...
+
+    kemudian coba lakukan send data, jika berhasil response akan menampilkan string yang kita buat
+        "Successfully added a new article."
+
+    chek juga pada database mongoDB Compas.
